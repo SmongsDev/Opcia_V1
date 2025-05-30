@@ -4,7 +4,7 @@ import React from 'react';
 const ContactSection = () => {
   const partnerCards = [
     {
-      img: "/images/contact/partner1.png",
+      img: "images/contact/partner1.png",
       title: "Physical Security",
       items: [
         "Private military companies (PMCs)",
@@ -13,7 +13,7 @@ const ContactSection = () => {
       ]
     },
     {
-      img: "/images/contact/partner2.png",
+      img: "images/contact/partner2.png",
       title: "Cyber Intelligence",
       items: [
         "Foreign company specializing in cyber intelligence",
@@ -22,7 +22,7 @@ const ContactSection = () => {
       ]
     },
     {
-      img: "/images/contact/partner3.png",
+      img: "images/contact/partner3.png",
       title: "Artificial Intelligence",
       items: [
         "Al-focused global company",
@@ -31,7 +31,7 @@ const ContactSection = () => {
       ]
     },
     {
-      img: "/images/contact/partner4.png",
+      img: "images/contact/partner4.png",
       title: "Cyber Security Training",
       items: [
         "Establishment of cyber training ranges",
@@ -74,7 +74,7 @@ const ContactSection = () => {
               <img
                 className="w-full h-auto object-contain"
                 alt="History Timeline"
-                src="/images/contact/history.png"
+                src="images/contact/history.png"
               />
             </div>
           </div>
@@ -124,7 +124,7 @@ const ContactSection = () => {
             <img
               className="relative flex-1 grow h-[250px] sm:h-[350px] lg:h-[504px] object-cover rounded-lg"
               alt="Office"
-              src="/images/contact/office.png"
+              src="images/contact/office.png"
             />
           </div>
         </div>

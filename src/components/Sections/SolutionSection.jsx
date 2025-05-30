@@ -4,18 +4,18 @@ import { ArrowRight } from 'lucide-react';
 
 const SolutionSection = () => {
   const solutions = [
-    { title: "Consulting", width: "409px", image: "/images/solution/consulting.png" },
-    { title: "moDon-D", width: "865px", featured: true, image: "/images/solution/modon-d.png" },
-    { title: "moDon-H", width: "717px", image: "/images/solution/modon-h.png" },
-    { title: "moDon-I", width: "807px", image: "/images/solution/modon-i.png" }
+    { title: "Consulting", width: "409px", image: "images/solution/consulting.png" },
+    { title: "moDon-D", width: "865px", featured: true, image: "images/solution/modon-d.png" },
+    { title: "moDon-H", width: "717px", image: "images/solution/modon-h.png" },
+    { title: "moDon-I", width: "807px", image: "images/solution/modon-i.png" }
   ];
 
   const secondRowSolutions = [
-    { title: "moDon-W", width: "613px", image: "/images/solution/modon-w.png" },
-    { title: "Cyber Training Platform", width: "491px", image: "/images/solution/cyber-training.png" },
-    { title: "moDon-M", width: "666px", image: "/images/solution/modon-m.png" },
-    { title: "moDon-N", width: "483px", image: "/images/solution/modon-n.png" },
-    { title: "Satellite Image Analysis", width: "530px", featured: true, image: "/images/solution/satellite-analysis.png" }
+    { title: "moDon-W", width: "613px", image: "images/solution/modon-w.png" },
+    { title: "Cyber Training Platform", width: "491px", image: "images/solution/cyber-training.png" },
+    { title: "moDon-M", width: "666px", image: "images/solution/modon-m.png" },
+    { title: "moDon-N", width: "483px", image: "images/solution/modon-n.png" },
+    { title: "Satellite Image Analysis", width: "530px", featured: true, image: "images/solution/satellite-analysis.png" }
   ];
 
   // DestinationCard 컴포넌트

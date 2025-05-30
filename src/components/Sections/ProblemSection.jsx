@@ -2,15 +2,15 @@ import React from 'react';
 
 const problems = [
   {
-    img: '/images/problem/problem1.png',
+    img: 'images/problem/problem1.png',
     text: 'IT-centric monitoring due to outdated equipment and legacy control systems',
   },
   {
-    img: '/images/problem/problem2.png',
+    img: 'images/problem/problem2.png',
     text: 'Overreliance on network separation (air-gapping)',
   },
   {
-    img: '/images/problem/problem3.png',
+    img: 'images/problem/problem3.png',
     text: 'Limited security solutions and attack prevention in specialized environments such as industrial facilities',
   },
 ];
