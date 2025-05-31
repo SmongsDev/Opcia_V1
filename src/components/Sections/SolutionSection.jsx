@@ -1,8 +1,10 @@
 // src/components/Sections/SolutionSection.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const SolutionSection = () => {
+  const [activeOverlay, setActiveOverlay] = useState(null);
+
   const solutions = [
     { title: "Consulting", width: "409px", image: "images/solution/consulting.png" },
     { title: "moDon-D", width: "865px", featured: true, image: "images/solution/modon-d.png" },
@@ -18,6 +20,22 @@ const SolutionSection = () => {
     { title: "Satellite Image Analysis", width: "530px", featured: true, image: "images/solution/satellite-analysis.png" }
   ];
 
+  const overlayDetails = {
+    "Consulting": [
+      "Facility-specific consulting on penetration testing, vulnerability analysis, and training",
+      "Independent or partner-led engagements based on project needs",
+      "Cyber & physical penetration testing, vulnerability research, compliance advisory",
+      "Security awareness and professional workforce training"
+    ],
+    "Cyber Training Platform": [
+      "Built on industrial control systems (ICS) and industrial network environments",
+      "Includes training modules from basic to advanced levels with real-world scenario simulations",
+      "Customizable and modular based on operational needs"
+
+    ]
+    // ...다른 카드도 필요시 추가...
+  };
+  
   // DestinationCard 컴포넌트
   const DestinationCard = ({ title, width, featured, image }) => {
     const descriptions = {
@@ -33,21 +51,23 @@ const SolutionSection = () => {
     };
 
     return (
-      <div
-        className={`solution-card ${featured ? 'featured' : ''} relative rounded-lg text-white group cursor-pointer overflow-hidden`}
-        style={{ width, height: '22rem' }}
-      >
+      <>
+        <div
+          className={`solution-card ${featured ? 'featured' : ''} relative rounded-lg text-white group cursor-pointer overflow-hidden`}
+          style={{ width, height: '22rem' }}
+          onClick={() => setActiveOverlay(title)}
+        >
         {/* 배경 이미지 */}
         <img
-          src={image}
-          alt={title}
-          className="absolute inset-0 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          style={{ height: '22rem' }}
-          onError={(e) => {
-            e.target.style.display = 'none';
-            e.target.nextElementSibling.style.display = 'block';
-          }}
-        />
+            src={image}
+            alt={title}
+            className="absolute inset-0 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            style={{ height: '22rem' }}
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextElementSibling.style.display = 'block';
+            }}
+          />
 
         {/* 비네팅 효과 */}
         <div className="absolute inset-0 pointer-events-none rounded-lg"
@@ -119,7 +139,41 @@ const SolutionSection = () => {
 
         {/* 호버 효과 오버레이 */}
         <div className="absolute inset-0 bg-yellow-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      </div>
+        </div>
+          {activeOverlay === title && (
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center"
+              onClick={() => setActiveOverlay(null)}
+              style={{ cursor: 'pointer' }}
+            >
+              <div
+                className="rounded-2xl p-10 max-w-3xl w-full text-left relative"
+                style={{
+                  background: 'rgba(20, 24, 31, 0.59)', // 더 어두운 반투명 배경
+                  boxShadow: '0 8px 32px 0 rgba(31,38,135,0.18)',
+                  backdropFilter: 'blur(8px)',
+                  WebkitBackdropFilter: 'blur(8px)',
+                  color: '#fff',
+                  cursor: 'auto'
+                }}
+                onClick={e => e.stopPropagation()}
+              >
+                <ul className="text-xl text-white space-y-6 list-disc pl-6">
+                  {(overlayDetails[title] || ["No details available."]).map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+                <button
+                  className="absolute top-4 right-6 text-2xl text-white font-bold"
+                  onClick={() => setActiveOverlay(null)}
+                  aria-label="Close"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+          )}
+      </>
     );
   };
 
