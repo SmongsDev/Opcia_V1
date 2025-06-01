@@ -23,15 +23,15 @@ const SolutionSection = () => {
   // DestinationCard 컴포넌트
   const DestinationCard = ({ title, width, featured, image }) => {
     const descriptions = {
-      "Consulting": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
-      "moDon-D": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
-      "moDon-H": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
-      "moDon-I": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
-      "moDon-W": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
-      "Cyber Training Platform": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
-      "moDon-M": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
-      "moDon-N": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
-      "Satellite Image Analysis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.",
+      "Consulting": "Customized cybersecurity consulting offering penetration testing, vulnerability analysis, security training, and compliance advisory through independent or partner-led engagements.",
+      "moDon-D": "Drone anti-forensics system using encryption techniques to conceal drone-collected data with power-efficient design for end-to-end protection of camera modules, sensors, and system logs.",
+      "moDon-H": "Industrial honeypot using actual PLCs and HMIs with intentional vulnerabilities to attract and monitor attackers, analyzing attack patterns to strengthen real-world defenses.",
+      "moDon-I": "Rust-based whitelist IoT monitoring solution that detects malicious processes, blocks C2 connections, and provides real-time alerts supporting over 20 IoT architectures.",
+      "moDon-W": "Wireless communication intelligence system tracking mobile phones and IoT devices across cellular/Wi-Fi networks with geolocation, DoS monitoring, and OSINT/SIGINT integration.",
+      "Cyber Training Platform": "ICS-based cyber training platform offering customizable modular training from basic to advanced levels with real-world scenario simulations for operational needs.",
+      "moDon-M": "Comprehensive military cybersecurity services providing IoT vulnerability analysis, secure drone firmware development, AI-powered threat detection, and cyber threat intelligence for defense standards.",
+      "moDon-N": "Compact network traffic anomaly detection system for industrial environments supporting over 40 protocols with real-time monitoring and immediate alert transmission.",
+      "Satellite Image Analysis": "Satellite vision-based cargo demand modeling system using data from Maxar, Planet Labs, and Artula with deep learning image alignment for logistics analysis."
     };
 
     const renderOverlay = () => {
@@ -265,7 +265,7 @@ const SolutionSection = () => {
               <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#facc15", letterSpacing: 0 }}>
                 <span className="text-yellow-400">moDon-H:</span> <span className="text-white">Industrial Honeynet</span>
               </h2>
-              <ul className="mb-8 space-y-3 text-base md:text-lg">
+              <ul className="mb-8 space-y-3 text-base md:text-lg list-disc pl-6">
                 <li>Diverts attacks away from real systems using actual industrial equipment</li>
                 <li>Built with PLCs and HMIs to simulate physical control environments</li>
                 <li>Segmented networks and intentional vulnerabilities attract and monitor attackers</li>
